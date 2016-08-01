@@ -1,0 +1,5 @@
+build/
+source/script/*
+!source/script/.gitkeep
+
+test/
