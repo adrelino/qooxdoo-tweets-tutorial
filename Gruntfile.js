@@ -1,38 +1,70 @@
-// requires
-var util = require('util');
-var qx = require("vendor/qooxdoo/tool/grunt");
+'use strict';
 
 // grunt
-module.exports = function(grunt) {
-  var config = {
+module.exports = function (grunt) {
+  var qxpath = 'qooxdoo';
+  if ('QOOXDOO_PATH' in process.env) {
+    qxpath = process.env.QOOXDOO_PATH;
+  }
 
-    generator_config: {
-      let: {
+  var config = {
+    qxcompiler: {
+      options: {
+        appClass: 'tweets.Application',
+        appName: 'tweets',
+        appTitle: 'Tweets Demo',
+        theme: 'tweets.theme.Theme',
+        locales: ['en'],
+        addScript: [],
+        addCss: [],
+        libraryDirs: [
+          qxpath + '/framework',
+          '.'
+        ]
+      },
+
+      source: {
+        options: {
+          target: 'source',
+          outDir: 'build/source/'
+        }
+      },
+
+      build: {
+        options: {
+          target: 'build',
+          outDir: 'build/build/',
+          // Only available within the 'build' target.
+          minify: true
+        }
+      },
+
+      hybrid: {
+        options: {
+          target: 'hybrid',
+          outDir: 'build/hybrid/'
+        }
       }
     },
 
-    common: {
-      "APPLICATION" : "tweets",
-      "QOOXDOO_PATH" : "vendor/qooxdoo",
-      "LOCALES": ["en"],
-      "QXTHEME": "tweets.theme.Theme"
-    }
-
-    /*
-    myTask: {
-      options: {},
-      myTarget: {
-        options: {}
+    watch: {
+      tweets: {
+        files: [
+          'source/class/**/*.js'
+        ],
+        tasks: ['qxcompiler:source']
       }
     }
-    */
   };
 
-  var mergedConf = qx.config.mergeConfig(config);
-  // console.log(util.inspect(mergedConf, false, null));
-  grunt.initConfig(mergedConf);
+  grunt.initConfig(config);
 
-  qx.task.registerTasks(grunt);
+  // 3. Where we tell Grunt we plan to use this plug-in.
+  // grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-qxcompiler');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // grunt.loadNpmTasks('grunt-my-plugin');
+  grunt.registerTask('default', [
+    'qxcompiler:source'
+  ]);
 };

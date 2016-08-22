@@ -1,9 +1,23 @@
 {
   "name": "tweets",
   "version": "0.1.0",
-  "repository" : {},
+  "repository": {},
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0"
+    "eslint": "^3.3.1",
+    "eslint-config-xo-space": "^0.14.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-qxcompiler": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo-space",
+      ".eslintrc-qx"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint-fix": "eslint --fix"
   }
 }
