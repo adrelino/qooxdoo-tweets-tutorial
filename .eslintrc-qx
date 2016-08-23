@@ -1,6 +1,0 @@
-{
-  "globals": {
-    "qx": true,
-    "tweets": true
-  }
-}
