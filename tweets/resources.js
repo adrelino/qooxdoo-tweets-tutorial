@@ -232,18 +232,6 @@ qx.$$packageData['0'] = {
       "gif",
       "qx"
     ],
-    "qx/decoration/Simple/splitpane/knob-horizontal.png": [
-      1,
-      8,
-      "png",
-      "qx"
-    ],
-    "qx/decoration/Simple/splitpane/knob-vertical.png": [
-      8,
-      1,
-      "png",
-      "qx"
-    ],
     "qx/decoration/Simple/menu/checkbox-invert.gif": [
       16,
       7,
@@ -266,6 +254,18 @@ qx.$$packageData['0'] = {
       16,
       5,
       "gif",
+      "qx"
+    ],
+    "qx/decoration/Simple/splitpane/knob-horizontal.png": [
+      1,
+      8,
+      "png",
+      "qx"
+    ],
+    "qx/decoration/Simple/splitpane/knob-vertical.png": [
+      8,
+      1,
+      "png",
       "qx"
     ],
     "qx/decoration/Simple/tabview/close.gif": [
