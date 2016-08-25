@@ -24,6 +24,7 @@ qx.Class.define('tweets.window.Login',
       form.add(password, this.tr('Password'), null, 'password');
 
       var controller = new qx.data.controller.Form(null, form);
+      controller.createModel();
 
       var loginbutton = new qx.ui.form.Button(this.tr('Login'));
       loginbutton.addListener('execute', function () {

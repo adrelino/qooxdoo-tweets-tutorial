@@ -11,6 +11,8 @@ qx.Class.define('tweets.service.Identica',
 
     members:
     {
+      __store: null,
+
       fetchTweets: function () {
         if (this.__store === null) {
           var url = 'http://demo.qooxdoo.org/5.0.1/tweets_step4.5/resource/tweets/service.js';

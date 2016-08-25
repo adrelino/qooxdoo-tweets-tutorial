@@ -54,15 +54,31 @@ module.exports = function (grunt) {
         ],
         tasks: ['qxcompiler:source']
       }
+    },
+
+    connect: {
+      server: {
+        options: {
+          livereload: true,
+          base: '.',
+          port: 8000
+        }
+      }
     }
   };
 
   grunt.initConfig(config);
 
-  // 3. Where we tell Grunt we plan to use this plug-in.
-  // grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-qxcompiler');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
+  // Compile source, run server and watch it
+  grunt.registerTask('serve', [
+    'qxcompiler:source',
+    'connect:server',
+    'watch'
+  ]);
 
   grunt.registerTask('default', [
     'qxcompiler:source'

@@ -33,6 +33,18 @@ cd ..
 export QOOXDOO_PATH=$PWD/qooxdoo
 ```
 
+#### Compile, serve with grunt-contrib-connect and watch it :)
+
+```bash
+grunt serve
+```
+
+Next go to http://localhost:8000/build/source/tweets.html
+
+```bash
+xdg-open http://127.0.0.1:8000/build/source/tweets.html
+```
+
 #### Compile it
 
 ```bash
