@@ -8,11 +8,10 @@
 
 ************************************************************************ */
 
-qx.Theme.define('tweets.theme.Font',
+qx.Theme.define('qxc.tweets.theme.Decoration',
   {
-    extend: qx.theme.simple.Font,
+    extend: qx.theme.simple.Decoration,
 
-    fonts:
-    {
+    decorations: {
     }
   });

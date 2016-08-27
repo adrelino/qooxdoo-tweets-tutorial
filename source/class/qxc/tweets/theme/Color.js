@@ -8,11 +8,11 @@
 
 ************************************************************************ */
 
-qx.Theme.define('tweets.theme.Decoration',
+qx.Theme.define('qxc.tweets.theme.Color',
   {
-    extend: qx.theme.simple.Decoration,
+    extend: qx.theme.simple.Color,
 
-    decorations:
-    {
+    colors: {
+      'tweet-time': '#E0E0E0'
     }
   });

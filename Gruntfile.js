@@ -8,13 +8,13 @@ module.exports = function (grunt) {
   }
 
   var config = {
-    qxcompiler: {
+    qx: {
       options: {
-        appClass: 'tweets.Application',
-        appName: 'tweets',
-        appTitle: 'Tweets Demo',
-        theme: 'tweets.theme.Theme',
-        locales: ['en'],
+        appClass: 'qxc.tweets.Application',
+        appName: 'qxc.tweets',
+        appTitle: 'QxC.Tweets Demo',
+        theme: 'qxc.tweets.theme.Theme',
+        locales: ['en', 'de'],
         addScript: [],
         addCss: [],
         libraryDirs: [
@@ -26,7 +26,8 @@ module.exports = function (grunt) {
       source: {
         options: {
           target: 'source',
-          outDir: 'build/source/'
+          outDir: 'build/source/',
+          copyResources: true
         }
       },
 
@@ -52,15 +53,15 @@ module.exports = function (grunt) {
         files: [
           'source/class/**/*.js'
         ],
-        tasks: ['qxcompiler:source']
+        tasks: ['qx:source']
       }
     },
 
     connect: {
       server: {
         options: {
-          livereload: true,
-          base: '.',
+          livereload: false,
+          base: 'build/source/',
           port: 8000
         }
       }
@@ -69,18 +70,18 @@ module.exports = function (grunt) {
 
   grunt.initConfig(config);
 
-  grunt.loadNpmTasks('grunt-qxcompiler');
+  grunt.loadNpmTasks('grunt-qx');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Compile source, run server and watch it
   grunt.registerTask('serve', [
-    'qxcompiler:source',
+    'qx:source',
     'connect:server',
     'watch'
   ]);
 
   grunt.registerTask('default', [
-    'qxcompiler:source'
+    'qx:source'
   ]);
 };

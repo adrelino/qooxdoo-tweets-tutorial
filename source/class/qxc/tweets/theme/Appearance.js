@@ -8,12 +8,11 @@
 
 ************************************************************************ */
 
-qx.Theme.define('tweets.theme.Appearance',
+qx.Theme.define('qxc.tweets.theme.Appearance',
   {
     extend: qx.theme.simple.Appearance,
 
-    appearances:
-    {
+    appearances: {
       'tweet-view': {},
 
       'tweet-view/time': {

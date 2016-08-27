@@ -23,7 +23,7 @@
 
   "provides" :
   {
-    "namespace"   : "tweets",
+    "namespace"   : "qxc.tweets",
     "encoding"    : "utf-8",
     "class"       : "source/class",
     "resource"    : "source/resource",

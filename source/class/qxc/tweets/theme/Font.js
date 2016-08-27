@@ -8,12 +8,10 @@
 
 ************************************************************************ */
 
-qx.Theme.define('tweets.theme.Color',
+qx.Theme.define('qxc.tweets.theme.Font',
   {
-    extend: qx.theme.simple.Color,
+    extend: qx.theme.simple.Font,
 
-    colors:
-    {
-      'tweet-time': '#E0E0E0'
+    fonts: {
     }
   });

@@ -1,12 +1,12 @@
 /**
- * @asset(tweets/logo.png)
+ * @asset(qxc.tweets/logo.png)
  */
-qx.Class.define('tweets.test.TweetView', {
+qx.Class.define('qxc.tweets.test.TweetView', {
   extend: qx.dev.unit.TestCase,
 
   members: {
     setUp: function () {
-      this.__tweetView = new tweets.widget.Tweet();
+      this.__tweetView = new qxc.tweets.widget.Tweet();
     },
 
     tearDown: function () {
@@ -15,7 +15,7 @@ qx.Class.define('tweets.test.TweetView', {
     },
 
     testSetIcon: function () {
-      var expectedSource = qx.util.ResourceManager.getInstance().toUri('logo.png');
+      var expectedSource = qx.util.ResourceManager.getInstance().toUri('qxc.tweets/logo.png');
       this.__tweetView.setIcon(expectedSource);
       var foundSource = this.__tweetView.getChildControl('icon').getSource();
       this.assertEquals(expectedSource, foundSource, 'Icon source was not set correctly!');
