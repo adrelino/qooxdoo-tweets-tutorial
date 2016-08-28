@@ -29,5 +29,8 @@
     "resource"    : "source/resource",
     "translation" : "source/translation",
     "type"        : "application"
-  }
+  },
+  "dependencies": [
+    "qooxdoo-sdk"
+  ]
 }

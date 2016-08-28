@@ -1,6 +1,7 @@
 {
   "name": "tweets",
   "version": "0.1.0",
+  "license": "MIT",
   "repository": {},
   "devDependencies": {
     "eslint": "^3.4.0",
@@ -10,7 +11,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-http-server": "^2.0.0",
-    "grunt-qx": "^0.1.5"
+    "grunt-qx": "^0.1.7"
   },
   "eslintConfig": {
     "extends": [
@@ -21,5 +22,5 @@
   "scripts": {
     "lint": "eslint",
     "lint-fix": "eslint --fix"
-  }
+  }  
 }

@@ -15,18 +15,16 @@ module.exports = function (grunt) {
         appTitle: 'QxC.Tweets Demo',
         theme: 'qxc.tweets.theme.Theme',
         locales: ['en', 'de'],
-        addScript: [],
-        addCss: [],
-        libraryDirs: [
-          qxpath + '/framework',
-          '.'
-        ]
+        libaryHints: {
+          'qooxdoo-sdk': qxpath + '/framework'
+        }
       },
 
       source: {
         options: {
           target: 'source',
           outDir: 'build/source/',
+          // Only available within the 'source' target.
           copyResources: true
         }
       },
