@@ -42,6 +42,9 @@ qx.Class.define('qxc.tweets.Application', {
         /* eslint-enable no-unused-expressions */
       }
 
+      qxc.promise.Rest.getInstance().init();
+      qxc.promise.Init.getInstance().init();
+
       var service = new qxc.tweets.service.Identica();
       service.addListener('changeTweets', function (e) {
         this.debug(qx.dev.Debug.debugProperties(e.getData()));
@@ -102,6 +105,54 @@ qx.Class.define('qxc.tweets.Application', {
       });
 
       main.open();
+
+      this.addPromiseTable();
+    },
+
+    addPromiseTable: function () {
+      var apiLoader = qxc.promise.Rest.getApi('https://jsonplaceholder.typicode.com');
+      var postApiPromise = apiLoader.then(function (api) {
+        return api.all('photos');
+      });
+      var tableModel = new qxc.promise.widget.table.model.Simple(postApiPromise, [
+        {
+          field: 'id',
+          name: 'ID',
+          sortable: true,
+          editable: false
+        },
+        {
+          field: 'albumId',
+          name: 'Album ID',
+          sortable: true,
+          editable: false
+        },
+        {
+          field: 'title',
+          name: 'Title',
+          sortable: true,
+          editable: true
+        },
+        {
+          field: 'url',
+          name: 'Url',
+          sortable: true,
+          editable: false
+        },
+        {
+          field: 'thumbnailUrl',
+          name: 'Thumbnail URL',
+          sortable: true,
+          editable: false
+        }],
+        'id'
+      );
+      var table = new qx.ui.table.Table(tableModel);
+      this.getRoot().add(table,
+        {
+          left: 800,
+          top: 30
+        });
     }
   }
 });

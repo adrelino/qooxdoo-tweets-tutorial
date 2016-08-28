@@ -22,5 +22,8 @@
   "scripts": {
     "lint": "eslint",
     "lint-fix": "eslint --fix"
-  }  
+  },
+  "dependencies": {
+    "qxc.promise": "0.0.2"
+  }
 }
