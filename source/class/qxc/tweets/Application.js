@@ -148,11 +148,11 @@ qx.Class.define('qxc.tweets.Application', {
         'id'
       );
       var table = new qx.ui.table.Table(tableModel);
-      this.getRoot().add(table,
-        {
-          left: 800,
-          top: 30
-        });
+      var win = new qx.ui.window.Window('QxC.Promise Demo');
+      win.setLayout(new qx.ui.layout.Grow());
+      win.add(table);
+      win.moveTo(800, 30);
+      win.open();
     }
   }
 });
