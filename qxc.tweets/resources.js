@@ -1,5 +1,48 @@
 qx.$$packageData['0'] = {
   "locales": {
+    "en": {
+      "alternateQuotationEnd": "’",
+      "alternateQuotationStart": "‘",
+      "quotationEnd": "”",
+      "quotationStart": "“",
+      "cldr_date_time_format_yQ": null,
+      "cldr_number_decimal_separator": ".",
+      "cldr_number_group_separator": ",",
+      "cldr_number_percent_format": "#,##0%",
+      "day": [
+        "Day"
+      ],
+      "dayperiod": [
+        "AM/PM"
+      ],
+      "era": [
+        "Era"
+      ],
+      "hour": [
+        "Hour"
+      ],
+      "minute": [
+        "Minute"
+      ],
+      "month": [
+        "Month"
+      ],
+      "second": [
+        "Second"
+      ],
+      "week": [
+        "Week"
+      ],
+      "weekday": [
+        "Day of the Week"
+      ],
+      "year": [
+        "Year"
+      ],
+      "zone": [
+        "Time Zone"
+      ]
+    },
     "C": {
       "alternateQuotationEnd": "’",
       "alternateQuotationStart": "‘",
@@ -43,47 +86,47 @@ qx.$$packageData['0'] = {
         "Time Zone"
       ]
     },
-    "en": {
-      "alternateQuotationEnd": "’",
-      "alternateQuotationStart": "‘",
-      "quotationEnd": "”",
-      "quotationStart": "“",
+    "de": {
+      "alternateQuotationEnd": "‘",
+      "alternateQuotationStart": "‚",
+      "quotationEnd": "“",
+      "quotationStart": "„",
       "cldr_date_time_format_yQ": null,
-      "cldr_number_decimal_separator": ".",
-      "cldr_number_group_separator": ",",
-      "cldr_number_percent_format": "#,##0%",
+      "cldr_number_decimal_separator": ",",
+      "cldr_number_group_separator": ".",
+      "cldr_number_percent_format": "#,##0 %",
       "day": [
-        "Day"
+        "Tag"
       ],
       "dayperiod": [
-        "AM/PM"
+        "Tageshälfte"
       ],
       "era": [
-        "Era"
+        "Epoche"
       ],
       "hour": [
-        "Hour"
+        "Stunde"
       ],
       "minute": [
         "Minute"
       ],
       "month": [
-        "Month"
+        "Monat"
       ],
       "second": [
-        "Second"
+        "Sekunde"
       ],
       "week": [
-        "Week"
+        "Woche"
       ],
       "weekday": [
-        "Day of the Week"
+        "Wochentag"
       ],
       "year": [
-        "Year"
+        "Jahr"
       ],
       "zone": [
-        "Time Zone"
+        "Zeitzone"
       ]
     }
   },
@@ -508,17 +551,17 @@ qx.$$packageData['0'] = {
       "png",
       "qx"
     ],
-    "tweets/logo.png": [
+    "qxc.tweets/logo.png": [
       22,
       22,
       "png",
-      "tweets"
+      "qxc.tweets"
     ],
-    "tweets/test.png": [
-      32,
-      32,
-      "png",
-      "tweets"
+    "qxc.tweets/service.js": [
+      null,
+      null,
+      "js",
+      "qxc.tweets"
     ]
   },
   "translations": {
@@ -526,6 +569,22 @@ qx.$$packageData['0'] = {
     "en": {
       "": "Project-Id-Version: 1.0\\nReport-Msgid-Bugs-To: you@your.org\\nPOT-Creation-Date: 2016-08-01 16:53+0100\\nPO-Revision-Date: 2016-08-01 16:53+0100\\nLast-Translator: you <you@your.org>\\nLanguage-Team: Team <yourteam@your.org>\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=utf-8\\nContent-Transfer-Encoding: 8bit\\n",
       "$$languagename": "English"
+    },
+    "de": {
+      "": "Project-Id-Version: 1.0\\nReport-Msgid-Bugs-To: you@your.org\\nPOT-Creation-Date: 2016-08-01 16:54+0100\\nPO-Revision-Date: 2016-08-01 16:54+0100\\nLast-Translator: you <you@your.org>\\nLanguage-Team: Team <yourteam@your.org>\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=utf-8\\nContent-Transfer-Encoding: 8bit\\n",
+      "Login": "Anmeldung",
+      "Username": "Benutzername",
+      "Password": "Passwort",
+      "Cancel": "Abbrechen",
+      "Preferences": "Einstellungen",
+      "Change the applications settings.": "Ändern Sie die Anwendungseinstellungen.",
+      "Reload": "Neu laden",
+      "Reload the tweets.": "Tweets neu laden.",
+      "Enter your message here...": "Geben Sie hier Ihre Nachricht ein...",
+      "Post": "Senden",
+      "Post this message on identi.ca": "Stelle diese Nachricht auf identi.ca",
+      "Language": "Sprache",
+      "$$languagename": "German"
     }
   }
 };
