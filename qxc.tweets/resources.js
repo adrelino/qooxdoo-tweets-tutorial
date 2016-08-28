@@ -1,6 +1,6 @@
 qx.$$packageData['0'] = {
   "locales": {
-    "en": {
+    "C": {
       "alternateQuotationEnd": "’",
       "alternateQuotationStart": "‘",
       "quotationEnd": "”",
@@ -43,7 +43,7 @@ qx.$$packageData['0'] = {
         "Time Zone"
       ]
     },
-    "C": {
+    "en": {
       "alternateQuotationEnd": "’",
       "alternateQuotationStart": "‘",
       "quotationEnd": "”",
@@ -227,12 +227,6 @@ qx.$$packageData['0'] = {
       "png",
       "qx"
     ],
-    "qx/decoration/Simple/colorselector/brightness-field.png": [
-      19,
-      256,
-      "png",
-      "qx"
-    ],
     "qx/decoration/Simple/colorselector/brightness-handle.gif": [
       35,
       11,
@@ -311,12 +305,6 @@ qx.$$packageData['0'] = {
       "png",
       "qx"
     ],
-    "qx/decoration/Simple/tabview/close.gif": [
-      10,
-      9,
-      "gif",
-      "qx"
-    ],
     "qx/decoration/Simple/table/ascending-invert.png": [
       10,
       10,
@@ -357,6 +345,12 @@ qx.$$packageData['0'] = {
       10,
       9,
       "png",
+      "qx"
+    ],
+    "qx/decoration/Simple/tabview/close.gif": [
+      10,
+      9,
+      "gif",
       "qx"
     ],
     "qx/decoration/Simple/tree/minus.gif": [
@@ -491,6 +485,12 @@ qx.$$packageData['0'] = {
       "gif",
       "qx"
     ],
+    "qx/decoration/Simple/colorselector/brightness-field.png": [
+      19,
+      256,
+      "png",
+      "qx"
+    ],
     "qx/icon/Tango/16/actions/dialog-cancel.png": [
       16,
       16,
@@ -550,6 +550,78 @@ qx.$$packageData['0'] = {
       1,
       "png",
       "qx"
+    ],
+    "qxc.promise/js/alameda.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/alameda.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/bluebird.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/bluebird.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/fetch.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/fetch.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/restful.standalone.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/restful.standalone.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/swagger-client.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/swagger-client.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/swagger-parser.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
+    ],
+    "qxc.promise/js/swagger-parser.min.js": [
+      null,
+      null,
+      "js",
+      "qxc.promise"
     ],
     "qxc.tweets/logo.png": [
       22,
