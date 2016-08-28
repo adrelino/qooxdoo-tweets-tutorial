@@ -79,6 +79,11 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
+  // Aliases
+  grunt.registerTask('build', ['qx:build']);
+  grunt.registerTask('source', ['qx:source']);
+
+  // Default build source.
   grunt.registerTask('default', [
     'qx:source'
   ]);
