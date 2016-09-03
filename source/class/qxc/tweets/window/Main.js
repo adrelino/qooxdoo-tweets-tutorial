@@ -1,22 +1,24 @@
 /**
  * @asset(qxc.tweets/logo.png)
  */
-qx.Class.define('qxc.tweets.window.Main', {
+qx.Class.define("qxc.tweets.window.Main", {
   extend: qx.ui.window.Window,
 
   events: {
-    reload: 'qx.event.type.Event',
-    post: 'qx.event.type.Data'
+    reload: "qx.event.type.Event",
+    post: "qx.event.type.Data"
   },
 
   members: {
-    getList: function () {
+    __list: null,
+
+    getList: function() {
       return this.__list;
     }
   },
 
-  construct: function () {
-    this.base(arguments, 'tweets', 'qxc.tweets/logo.png');
+  construct: function() {
+    this.base(arguments, "tweets", "qxc.tweets/logo.png");
 
     // Hide buttons
     this.setShowClose(false);
@@ -43,10 +45,10 @@ qx.Class.define('qxc.tweets.window.Main', {
 
     // settings button
     var settingsWindow = null;
-    var settingsButton = new qx.ui.toolbar.Button(this.tr('Preferences'));
+    var settingsButton = new qx.ui.toolbar.Button(this.tr("Preferences"));
     toolbar.add(settingsButton);
-    settingsButton.setToolTipText(this.tr('Change the applications settings.'));
-    settingsButton.addListener('execute', function () {
+    settingsButton.setToolTipText(this.tr("Change the applications settings."));
+    settingsButton.addListener("execute", function() {
       if (!settingsWindow) {
         settingsWindow = new qxc.tweets.window.Settings();
         settingsWindow.moveTo(320, 30);
@@ -55,10 +57,10 @@ qx.Class.define('qxc.tweets.window.Main', {
     }, this);
 
     // reload button
-    var reloadButton = new qx.ui.toolbar.Button(this.tr('Reload'));
-    reloadButton.setToolTipText(this.tr('Reload the tweets.'));
-    reloadButton.addListener('execute', function () {
-      this.fireEvent('reload');
+    var reloadButton = new qx.ui.toolbar.Button(this.tr("Reload"));
+    reloadButton.setToolTipText(this.tr("Reload the tweets."));
+    reloadButton.addListener("execute", function() {
+      this.fireEvent("reload");
     }, this);
     toolbar.add(reloadButton);
 
@@ -68,17 +70,17 @@ qx.Class.define('qxc.tweets.window.Main', {
 
     // post button
     var textarea = new qx.ui.form.TextArea();
-    var postButton = new qx.ui.form.Button(this.tr('Post'));
-    postButton.setToolTipText(this.tr('Post this message on identi.ca'));
+    var postButton = new qx.ui.form.Button(this.tr("Post"));
+    postButton.setToolTipText(this.tr("Post this message on identi.ca"));
     postButton.setWidth(60);
     postButton.setEnabled(false);
-    postButton.addListener('execute', function () {
-      this.fireDataEvent('post', textarea.getValue());
+    postButton.addListener("execute", function() {
+      this.fireDataEvent("post", textarea.getValue());
     }, this);
 
     // textarea
-    textarea.setPlaceholder(this.tr('Enter your message here...'));
-    textarea.addListener('input', function (e) {
+    textarea.setPlaceholder(this.tr("Enter your message here..."));
+    textarea.addListener("input", function(e) {
       var value = e.getData();
       postButton.setEnabled(value.length <= 140 && value.length > 0);
     }, this);

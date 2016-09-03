@@ -8,7 +8,7 @@
 
 ************************************************************************ */
 
-qx.Theme.define('qxc.tweets.theme.Theme', {
+qx.Theme.define("qxc.tweets.theme.Theme", {
   meta: {
     color: qxc.tweets.theme.Color,
     decoration: qxc.tweets.theme.Decoration,

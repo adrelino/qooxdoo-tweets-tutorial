@@ -1,29 +1,29 @@
-'use strict';
+"use strict";
 
 // grunt
-module.exports = function (grunt) {
-  var qxpath = 'qooxdoo';
-  if ('QOOXDOO_PATH' in process.env) {
+module.exports = function(grunt) {
+  var qxpath = "qooxdoo";
+  if ("QOOXDOO_PATH" in process.env) {
     qxpath = process.env.QOOXDOO_PATH;
   }
 
   var config = {
     qx: {
       options: {
-        appClass: 'qxc.tweets.Application',
-        appName: 'qxc.tweets',
-        appTitle: 'QxC.Tweets Demo',
-        theme: 'qxc.tweets.theme.Theme',
-        locales: ['en', 'de'],
+        appClass: "qxc.tweets.Application",
+        appName: "qxc.tweets",
+        appTitle: "QxC.Tweets Demo",
+        theme: "qxc.tweets.theme.Theme",
+        locales: ["en", "de"],
         libaryHints: {
-          'qooxdoo-sdk': qxpath + '/framework'
+          "qooxdoo": qxpath + "/framework"
         }
       },
 
       source: {
         options: {
-          target: 'source',
-          outDir: 'build/source/',
+          target: "source",
+          outDir: "build/source/",
           // Only available within the 'source' target.
           copyResources: true
         }
@@ -31,8 +31,8 @@ module.exports = function (grunt) {
 
       build: {
         options: {
-          target: 'build',
-          outDir: 'build/build/',
+          target: "build",
+          outDir: "build/build/",
           // Only available within the 'build' target.
           minify: true
         }
@@ -40,8 +40,8 @@ module.exports = function (grunt) {
 
       hybrid: {
         options: {
-          target: 'hybrid',
-          outDir: 'build/hybrid/'
+          target: "hybrid",
+          outDir: "build/hybrid/"
         }
       }
     },
@@ -49,9 +49,9 @@ module.exports = function (grunt) {
     watch: {
       tweets: {
         files: [
-          'source/class/**/*.js'
+          "source/class/**/*.js"
         ],
-        tasks: ['qx:source']
+        tasks: ["qx:source"]
       }
     },
 
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           livereload: false,
-          base: 'build/source/',
+          base: "build/source/",
           port: 8000
         }
       }
@@ -68,23 +68,23 @@ module.exports = function (grunt) {
 
   grunt.initConfig(config);
 
-  grunt.loadNpmTasks('grunt-qx');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks("grunt-qx");
+  grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks("grunt-contrib-watch");
 
   // Compile source, run server and watch it
-  grunt.registerTask('serve', [
-    'qx:source',
-    'connect:server',
-    'watch'
+  grunt.registerTask("serve", [
+    "qx:source",
+    "connect:server",
+    "watch"
   ]);
 
   // Aliases
-  grunt.registerTask('build', ['qx:build']);
-  grunt.registerTask('source', ['qx:source']);
+  grunt.registerTask("build", ["qx:build"]);
+  grunt.registerTask("source", ["qx:source"]);
 
   // Default build source.
-  grunt.registerTask('default', [
-    'qx:source'
+  grunt.registerTask("default", [
+    "qx:source"
   ]);
 };

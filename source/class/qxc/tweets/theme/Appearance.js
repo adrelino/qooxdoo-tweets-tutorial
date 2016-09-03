@@ -8,25 +8,25 @@
 
 ************************************************************************ */
 
-qx.Theme.define('qxc.tweets.theme.Appearance',
+qx.Theme.define("qxc.tweets.theme.Appearance",
   {
     extend: qx.theme.simple.Appearance,
 
     appearances: {
-      'tweet-view': {},
+      "tweet-view": {},
 
-      'tweet-view/time': {
-        style: function () {
+      "tweet-view/time": {
+        style: function() {
           return {
-            textColor: '#E0E0E0'
+            textColor: "#E0E0E0"
           };
         }
       },
 
-      'toolbar': {
-        style: function () {
+      "toolbar": {
+        style: function() {
           return {
-            backgroundColor: 'window-border-inner'
+            backgroundColor: "window-border-inner"
           };
         }
       }

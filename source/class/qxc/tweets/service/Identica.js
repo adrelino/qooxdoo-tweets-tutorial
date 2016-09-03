@@ -1,26 +1,26 @@
 /**
  * @asset(qxc.tweets/service.js)
  */
-qx.Class.define('qxc.tweets.service.Identica', {
+qx.Class.define("qxc.tweets.service.Identica", {
   extend: qx.core.Object,
 
   properties: {
     tweets: {
       nullable: true,
-      event: 'changeTweets'
+      event: "changeTweets"
     }
   },
 
   members: {
     __store: null,
 
-    fetchTweets: function () {
+    fetchTweets: function() {
       if (this.__store === null) {
-        var url = qx.util.ResourceManager.getInstance().toUri('qxc.tweets/service.js');
+        var url = qx.util.ResourceManager.getInstance().toUri("qxc.tweets/service.js");
         this.__store = new qx.data.store.Jsonp();
-        this.__store.setCallbackName('callback');
+        this.__store.setCallbackName("callback");
         this.__store.setUrl(url);
-        this.__store.bind('model', this, 'tweets');
+        this.__store.bind("model", this, "tweets");
       } else {
         this.__store.reload();
       }

@@ -39,16 +39,16 @@ export QOOXDOO_PATH=$PWD/qooxdoo
 grunt serve
 ```
 
-Next go to http://127.0.0.1:8000/build/source/tweets.html
+Next go to http://127.0.0.1:8000/qxc.tweets.html
 
 ```bash
-xdg-open http://127.0.0.1:8000/build/source/tweets.html
+xdg-open http://127.0.0.1:8000/qxc.tweets.html
 ```
 
 #### Compile it
 
 ```bash
-grunt qx:source
+grunt source
 ```
 
 #### Open in browser

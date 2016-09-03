@@ -1,3 +1,8 @@
 build/
+gh-pages/
 node_modules/
+source/script/
 source/resource/
+
+# No need for lint
+Gruntfile.js
