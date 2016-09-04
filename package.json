@@ -10,7 +10,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-http-server": "^2.0.0",
-    "grunt-qx": "^0.1.12"
+    "grunt-qx": "^0.1.13"
   },
   "eslintConfig": {
     "extends": [
@@ -22,7 +22,7 @@
     "eslint": "eslint --cache"
   },
   "dependencies": {
-    "@pcdummy/qx": "^5.0.3",
-    "qxc.promise": "0.0.4"
+    "@pcdummy/qx": "^5.0.4",
+    "qxc.promise": "^0.0.4"
   }
 }
