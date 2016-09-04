@@ -8,14 +8,14 @@ example for an app with QxCompiler and grunt-qx.
 #### Clone
 
 ```bash
-git clone https://github.com/pcdummy/qooxdoo-tweets-tutorial.git
+$ git clone https://github.com/pcdummy/qooxdoo-tweets-tutorial.git
 ```
 
 #### Run npm install
 
 ```bash
-cd qooxdoo-tweets-tutorial
-npm install
+$ cd qooxdoo-tweets-tutorial
+$ npm install
 ```
 
 ### Compile, serve with grunt-contrib-connect and watch it :)
@@ -77,6 +77,26 @@ Lints your code with eslint and applies eslint fixes.
 #### clean
 
 Remove all builds.
+
+
+### Update qx and the tools
+
+Install [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+
+```bash
+$ npm install -g npm-check-updates
+```
+
+Run npm-check-updates:
+```bash
+$ ncu -a
+```
+
+And update your packages:
+```bash
+$ npm update
+```
+
 
 ### License
 
