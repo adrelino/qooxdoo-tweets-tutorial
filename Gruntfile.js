@@ -2,6 +2,9 @@
 
 // grunt
 module.exports = function(grunt) {
+  // time-grunt
+  require('time-grunt')(grunt);
+
   var config = {
     qx: {
       options: {
@@ -39,22 +42,81 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      tweets: {
+      source: {
         files: [
           "source/class/**/*.js"
         ],
         tasks: ["qx:source"]
+      },
+
+      hybrid: {
+        files: [
+          "source/class/**/*.js"
+        ],
+        tasks: ["qx:hybrid"]
+      },
+
+      build: {
+        files: [
+          "source/class/**/*.js"
+        ],
+        tasks: ["qx:build"]
       }
     },
 
     connect: {
-      server: {
+      source: {
         options: {
           livereload: false,
           base: "build/source/",
           port: 8000
         }
+      },
+
+      hybrid: {
+        options: {
+          livereload: false,
+          base: "build/hybrid/",
+          port: 8000
+        }
+      },
+
+      build: {
+        options: {
+          livereload: false,
+          base: "build/build/",
+          port: 8000
+        }
       }
+    },
+
+    run: {
+      eslint: {
+        cmd: 'npm',
+        args: [
+          'run',
+          'eslint',
+          '--',
+          '.'
+        ]
+      },
+
+      "eslint-fix": {
+        cmd: 'npm',
+        args: [
+          'run',
+          'eslint',
+          '--',
+          '--fix',
+          '.'
+        ]
+      }
+    },
+
+    clean: {
+      build: ["build/build"],
+      source: ["build/source"],
+      hybrid: ["build/hybrid"]
     }
   };
 
@@ -63,17 +125,35 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-qx");
   grunt.loadNpmTasks("grunt-contrib-connect");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks('grunt-run');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Compile source, run server and watch it
-  grunt.registerTask("serve", [
+  grunt.registerTask("source-server", [
     "qx:source",
-    "connect:server",
-    "watch"
+    "connect:source",
+    "watch:source"
+  ]);
+
+  grunt.registerTask("source-hybrid-server", [
+    "qx:hybrid",
+    "connect:hybrid",
+    "watch:hybrid"
+  ]);
+
+  grunt.registerTask("build-server", [
+    "qx:build",
+    "connect:build",
+    "watch:build"
   ]);
 
   // Aliases
   grunt.registerTask("build", ["qx:build"]);
+  grunt.registerTask("source-hybrid", ["qx:build"]);
   grunt.registerTask("source", ["qx:source"]);
+
+  grunt.registerTask("lint", ["run:eslint"]);
+  grunt.registerTask("lint-fix", ["run:eslint-fix"]);
 
   // Default build source.
   grunt.registerTask("default", [

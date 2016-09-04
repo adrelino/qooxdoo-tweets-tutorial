@@ -18,10 +18,10 @@ cd qooxdoo-tweets-tutorial
 npm install
 ```
 
-#### Compile, serve with grunt-contrib-connect and watch it :)
+### Compile, serve with grunt-contrib-connect and watch it :)
 
 ```bash
-grunt serve
+grunt source-server
 ```
 
 Next go to http://127.0.0.1:8000/qxc.tweets.html
@@ -39,6 +39,44 @@ Just run:
 ```
 grunt watch
 ```
+
+### Available grunt tasks
+
+#### source-server
+
+Builds the "source" version of the tweets app, runs a server and rebuilds on-to-fly.
+
+#### source-hybrid-server
+
+Builds the "hybrid" version of the tweets app, runs a server and rebuilds on-to-fly.
+
+#### build-server
+
+Builds the "build" version of the tweets app, runs a server and rebuilds on-to-fly.
+
+#### build
+
+Builds the "build" version of the tweets app.
+
+#### source-hybrid
+
+Builds the "hybrid" version of the tweets app.
+
+#### source
+
+Builds the "source" version of the tweets app.
+
+#### lint
+
+Lints your code with eslint.
+
+#### lint-fix
+
+Lints your code with eslint and applies eslint fixes.
+
+#### clean
+
+Remove all builds.
 
 ### License
 
