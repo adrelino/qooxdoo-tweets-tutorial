@@ -4,13 +4,13 @@
   "license": "MIT",
   "repository": {},
   "devDependencies": {
-    "eslint-config-qx": "0.0.3",
+    "eslint-config-qx": "^0.0.4",
     "grunt": "~1.0.1",
     "grunt-contrib-clean": "~1.0.0",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-http-server": "^2.0.0",
-    "grunt-qx": "^0.1.8"
+    "grunt-qx": "^0.1.12"
   },
   "eslintConfig": {
     "extends": [
@@ -22,6 +22,7 @@
     "eslint": "eslint --cache"
   },
   "dependencies": {
-    "qxc.promise": "0.0.3"
+    "@pcdummy/qx": "^5.0.3",
+    "qxc.promise": "0.0.4"
   }
 }

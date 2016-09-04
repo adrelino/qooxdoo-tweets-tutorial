@@ -18,21 +18,6 @@ cd qooxdoo-tweets-tutorial
 npm install
 ```
 
-#### Clone and checkout a special version of qooxdoo
-
-```bash
-git clone https://github.com/johnspackman/qooxdoo.git
-cd qooxdoo
-git checkout -b qxcompiler-master-v2 origin/qxcompiler-master-v2
-cd ..
-```
-
-#### Set your QOOXDOO_PATH as env var
-
-```bash
-export QOOXDOO_PATH=$PWD/qooxdoo
-```
-
 #### Compile, serve with grunt-contrib-connect and watch it :)
 
 ```bash
@@ -43,18 +28,6 @@ Next go to http://127.0.0.1:8000/qxc.tweets.html
 
 ```bash
 xdg-open http://127.0.0.1:8000/qxc.tweets.html
-```
-
-#### Compile it
-
-```bash
-grunt source
-```
-
-#### Open in browser
-
-```bash
-xdg-open ./build/source/tweets.html
 ```
 
 ### Develop it

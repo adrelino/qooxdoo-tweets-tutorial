@@ -2,11 +2,6 @@
 
 // grunt
 module.exports = function(grunt) {
-  var qxpath = "qooxdoo";
-  if ("QOOXDOO_PATH" in process.env) {
-    qxpath = process.env.QOOXDOO_PATH;
-  }
-
   var config = {
     qx: {
       options: {
@@ -14,10 +9,7 @@ module.exports = function(grunt) {
         appName: "qxc.tweets",
         appTitle: "QxC.Tweets Demo",
         theme: "qxc.tweets.theme.Theme",
-        locales: ["en", "de"],
-        libaryHints: {
-          "qooxdoo": qxpath + "/framework"
-        }
+        locales: ["en", "de"]
       },
 
       source: {

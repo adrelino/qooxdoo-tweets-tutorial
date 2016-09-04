@@ -31,7 +31,7 @@
     "type"        : "application"
   },
   "dependencies": [
-    "qooxdoo",
+    "@pcdummy/qx",
     "qxc.promise"
   ]
 }
